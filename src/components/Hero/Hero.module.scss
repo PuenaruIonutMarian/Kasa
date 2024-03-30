@@ -1,0 +1,36 @@
+.hero {
+  height: 223px;
+  margin: 50px 0;
+  padding: 1rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  &.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    color: #ffffff;
+    z-index: 1;
+  }
+}
+

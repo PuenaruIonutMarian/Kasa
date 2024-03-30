@@ -1,11 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./Home.module.scss";
+import Hero from "../../components/Hero/Hero";
+import heroImg from "../../assets/homepage-hero.png";
 
-function App() {
+
+function Home() {
   return (
-    <div className="App">
+    <>
+
+      <Hero
+        type="home"
+        heroImg={heroImg}
+        title="Chez vous, partout et ailleurs"
+      />
+
+    <div className={styles.main}>
+
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,7 +30,11 @@ function App() {
         </a>
       </header>
     </div>
+  
+  </>
   );
+
 }
 
-export default App;
+
+export default Home;
