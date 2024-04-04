@@ -1,21 +1,22 @@
-export default class Api {
-  constructor() {
-    this.url = "/data/logements.json";
-  }
+class requestService {
+constructor() {
+  this.url = '/data/logements.json';
+}
 
-  async fetchData() {
-    try {
-      const response = await fetch(this.url);
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
-      }
-      return await response.json();
-    } catch (error) {
-      throw new Error('Error fetching data: ' + error.message);
+
+async fetchData() {
+  try {
+    const response = await fetch(this.url);
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
     }
+    return await response.json();
+  } catch (error) {
+    throw new Error('Error fetching data: ' + error.message);
   }
+}
 
-  async getAccomodations() {
+  async getAccommodations() {
     try {
       const data = await this.fetchData();
       return data;
@@ -24,7 +25,7 @@ export default class Api {
     }
   }
 
-  async getAccomodationById(id) {
+  async getAccommodationById(id) {
     try {
       const data = await this.fetchData();
       const accommodation = data.find(el => el.id === id);
@@ -37,3 +38,6 @@ export default class Api {
     }
   }
 }
+
+
+export default requestService; 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import styles from "./Header.module.scss";
+import styles from "./header.module.scss";
 import logo from '../../assets/logo.svg';
 
 const Header = () => {
@@ -14,12 +14,12 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <NavLink exact to="/" activeClassName={styles.active}>
+            <NavLink exact="true" to="/" activeclassname={styles.active}>
               Accueil
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" activeClassName={styles.active}>
+            <NavLink to="/about" activeclassname={styles.active}>
               A Propos
             </NavLink>
           </li>
