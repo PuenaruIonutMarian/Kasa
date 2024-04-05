@@ -1,0 +1,67 @@
+@use "../../styles/variables.scss" as *;
+
+.errorMessage {
+  padding: 1rem;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 263px;
+    width: 597px;
+  }
+
+  h3 {
+    color: $clr-primary;
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  a {
+    color: #000;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .errorMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    h1 {
+      font-size: 142px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .errorMessage {
+    gap: 5rem;
+
+    h1 {
+      font-size: 96px;
+    }
+
+    h3 {
+      font-size: 18px;
+      max-width: 250px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+  }
+}

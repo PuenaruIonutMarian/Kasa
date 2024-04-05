@@ -1,0 +1,39 @@
+.card {
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  text-decoration: none;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      #ffffff00 0%,
+      #0a0a0a00 0%,
+      #04040434 20.5%,
+      #00000080 50%
+    );
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    height: 255px;
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./header.module.scss";
 import logo from '../../assets/logo.svg';
@@ -19,7 +19,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" activeclassname={styles.active}>
+            <NavLink to="/apropos" activeclassname={styles.active}>
               A Propos
             </NavLink>
           </li>

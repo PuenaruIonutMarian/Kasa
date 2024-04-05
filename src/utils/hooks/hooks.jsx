@@ -7,17 +7,14 @@ export function useAccommodations() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const service = new requestService();
-
+     const service = new requestService();
     const fetchAccommodations = async () => {
       try {
         const data = await service.getAccommodations();
         setAccommodations(data);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching accommodations:', error);
-        setError(true);
-        setLoading(false);
+        handleFetchError(error);
       }
     };
 
@@ -29,17 +26,15 @@ export function useAccommodations() {
     };
   }, []);
 
-  const getAccommodationById = async (id) => {
-    try {
-      const service = new requestService();
-      const data = await service.getAccommodationById(id);
-      return data;
-    } catch (error) {
-      console.error('Error fetching accommodation by ID:', error);
-      throw new Error('Error fetching accommodation by ID: ' + error.message);
-    }
+  const handleFetchError = (error) => {
+    console.error('Error fetching accommodations:', error);
+    setError(true);
+    setLoading(false);
+  };
+
+  const getAccommodationById = (id) => {
+    return accommodations.find(item => item.id === id);
   };
 
   return { accommodations, isLoading, error, getAccommodationById };
 }
-

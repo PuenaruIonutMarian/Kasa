@@ -1,0 +1,100 @@
+@use "../../styles/variables.scss" as *;
+
+.collapse {
+  &__header {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: $clr-primary;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    position: relative;
+    top: 4px;
+
+    img {
+      transition: transform 500ms;
+    }
+  }
+
+  &__content {
+    padding: 0 20px;
+    border-radius: 0 0 5px 5px;
+    background-color: $clr-bg-light;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+
+    div {
+      overflow: hidden;
+    }
+
+    p,
+    ul {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .collapse {
+    &__header {
+      font-size: 22px;
+    }
+
+    &__content {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse {
+    &__header {
+      font-size: 18px;
+
+      img {
+        width: 20px;
+      }
+    }
+
+    &__content {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .collapse {
+    &__header {
+      padding: 10px;
+      font-size: 13px;
+
+      img {
+        width: 16px;
+      }
+    }
+
+    &__content {
+      p, ul {
+        font-size: 12px;
+      }
+    }
+  }
+}

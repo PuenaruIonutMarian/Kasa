@@ -34,3 +34,40 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    height: 192px;
+
+    h1 {
+      font-size: 36px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 162px;
+    margin-block: 34px 32px;
+    border-radius: 15px;
+
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 111px;
+    margin-block: 27px 22px;
+    border-radius: 10px;
+    justify-items: start;
+    box-shadow: none;
+
+    h1 {
+      font-size: 24px;
+      max-width: 225px;
+    }
+  }
+}
+
