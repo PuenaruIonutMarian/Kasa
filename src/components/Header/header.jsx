@@ -5,7 +5,7 @@ import logo from '../../assets/logo.svg';
 
 const Header = () => {
   return (
-    <header className={`${styles.header} pad`}>
+    <header className={`${styles.header} margins`}>
       <div className={styles.logo}>
         <Link to="/">
           <img src={logo} alt="Logo" />

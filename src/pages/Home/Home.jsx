@@ -15,7 +15,7 @@ function Home() {
         heroImg={heroImg}
         title="Chez vous, partout et ailleurs"
       />
-      <main className={`${styles.main} pad`}>
+      <main className={`${styles.main} margins`}>
         {isLoading ? (
           <p>loading....</p>
 

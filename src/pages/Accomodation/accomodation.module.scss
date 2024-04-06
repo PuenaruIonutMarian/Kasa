@@ -1,0 +1,146 @@
+@use "../../styles/variables.scss" as *;
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 24px;
+
+  .acc {
+    h2 {
+      font-size: 36px;
+      font-weight: 500;
+      color: $clr-primary;
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    .tag_wrapper {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .host {
+    .host_infos {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 21px;
+
+      span {
+        max-width: 95px;
+        text-align: end;
+        font-size: 18px;
+        color: $clr-primary;
+      }
+
+      img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+.accordion_wrapper {
+  display: flex;
+  gap: 5.3vw;
+
+  div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-bottom: 24px;
+  }
+
+  .infos {
+    .acc {
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+    }
+
+    .host {
+      .host_infos {
+        span {
+          font-size: 16px;
+        }
+
+        img {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .infos {
+    flex-direction: column;
+    margin-bottom: 13px;
+
+    .acc {
+      align-self: flex-start;
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+
+    .host {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 16px;
+
+      .host_infos {
+        margin-bottom: 0;
+        order: 2;
+
+        span {
+          font-size: 12px;
+          max-width: 60px;
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  .accordion_wrapper {
+    flex-direction: column;
+  }
+}

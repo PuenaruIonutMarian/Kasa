@@ -10,38 +10,34 @@ html {
 }
 
 body {
+  // padding: 5rem;
     box-sizing: border-box;
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    // max-width: 1240px;
 
 }
 
 
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.pad {
+.margins {
   margin: 45px 7% 50px;
 }
 
 @media (max-width: 1024px) {
-  .pad {
+  .margins {
     margin: 40px 40px 0;
   }
 }
 
 @media (max-width: 768px) {
-  .pad {
+  .margins {
     margin: 32px 32px 0;
   }
 }
 
 @media (max-width: 576px) {
-  .pad {
+  .margins {
     margin: 20px 20px 0;
   }
 }
