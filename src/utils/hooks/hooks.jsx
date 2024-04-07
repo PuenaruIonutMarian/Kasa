@@ -7,7 +7,7 @@ export function useAccommodations() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-     const service = new requestService();
+    const service = new requestService();
     const fetchAccommodations = async () => {
       try {
         const data = await service.getAccommodations();
@@ -19,11 +19,6 @@ export function useAccommodations() {
     };
 
     fetchAccommodations();
-
-    // Clean up function
-    return () => {
-      // Cleanup logic if needed
-    };
   }, []);
 
   const handleFetchError = (error) => {

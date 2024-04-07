@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./carousel.module.scss";
 import chevronLeft from "./../../assets/chevron_left.svg";
 import chevronRight from "./../../assets/chevron_right.svg";
@@ -6,32 +6,18 @@ import chevronRight from "./../../assets/chevron_right.svg";
 function Carousel({ title, slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  function goToPrevious() {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  }
+  const goToPrevious = () => setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
 
-  function goToNext() {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  }
+  const goToNext = () => setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
 
   return (
     <div className={styles.carousel}>
       {slides.length > 1 && (
         <>
-          <button
-            className={`${styles.btn} ${styles.btn_left}`}
-            onClick={goToPrevious}
-          >
+          <button className={`${styles.btn} ${styles.btn_left}`} onClick={goToPrevious}>
             <img src={chevronLeft} alt="chevron left" />
           </button>
-          <button
-            className={`${styles.btn} ${styles.btn_right}`}
-            onClick={goToNext}
-          >
+          <button className={`${styles.btn} ${styles.btn_right}`} onClick={goToNext}>
             <img src={chevronRight} alt="chevron right" />
           </button>
           <span className={styles.photo_index}>
@@ -40,11 +26,7 @@ function Carousel({ title, slides }) {
         </>
       )}
 
-      <img
-        className={styles.slide}
-        src={slides[currentIndex]}
-        alt={`${title}`}
-      />
+      <img className={styles.slide} src={slides[currentIndex]} alt={`${title}`} />
     </div>
   );
 }

@@ -4,6 +4,8 @@ import styles from './home.module.scss';
 import Hero from '../../components/Hero/hero';
 import heroImg from '../../assets/homepage-hero.png';
 import Card from '../../components/Card/card';
+import { Loader } from '../../components/Loader/loader';
+import ErrorMessage from '../../components/Error/ErrorMessage';
 
 function Home() {
   const { accommodations, isLoading, error } = useAccommodations();
@@ -17,10 +19,10 @@ function Home() {
       />
       <main className={`${styles.main} margins`}>
         {isLoading ? (
-          <p>loading....</p>
+          <Loader />
 
         ) : error ? (
-          <p>Error fetching accommodations</p>
+          <ErrorMessage />
         ) : (
           accommodations.map(accommodation => (
             <Card

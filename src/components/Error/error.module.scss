@@ -1,5 +1,11 @@
 @use "../../styles/variables.scss" as *;
 
+.message{
+    color: $clr-primary;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
 .errorMessage {
   padding: 1rem;
   min-height: 68vh;
@@ -65,3 +71,6 @@
     }
   }
 }
+
+
+
