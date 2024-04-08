@@ -15,7 +15,7 @@ function Accommodation() {
   const accommodation = getAccommodationById(id);
 
 
-// Combine error handling
+// error handling
   if (isLoading) {
     return <Loader />;
   } else if (error) {

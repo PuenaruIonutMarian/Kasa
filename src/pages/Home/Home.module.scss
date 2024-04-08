@@ -1,7 +1,6 @@
 @use '../../styles/variables.scss' as *;
 
 .main {
-  // max-width: 1140px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
@@ -11,7 +10,7 @@
   padding: 50px;
   margin: 0 auto; 
 
-  // Media QUERY Tablet
+  // Media QUERY Mobile wide
   @media screen and (max-width: 768px) {
     justify-content: space-around; 
     padding: 32px;

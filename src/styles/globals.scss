@@ -1,24 +1,17 @@
 @use './reset.scss' as *;
 @use './variables.scss' as *;
 
-
-
 html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
-
 }
 
 body {
-  // padding: 5rem;
     box-sizing: border-box;
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    // max-width: 1240px;
-
 }
-
 
 .margins {
   margin: 45px 7% 50px;
