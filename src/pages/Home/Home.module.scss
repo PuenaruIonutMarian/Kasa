@@ -1,28 +1,30 @@
 @use '../../styles/variables.scss' as *;
 
 .main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 50px;
+  // max-width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 50px; 
   background-color:$clr-bg-light ;
   border-radius: 25px;
   padding: 50px;
-}
+  margin: 0 auto; 
 
-
-
-@media (max-width: 768px) {
-  .main {
+  // Media QUERY Tablet
+  @media screen and (max-width: 768px) {
+    justify-content: space-around; 
     padding: 32px;
     gap: 32px;
   }
-}
 
-@media (max-width: 576px) {
-  .main {
+  // Media QUERY mobile 
+  @media screen and (max-width: 480px) {
+    justify-content: center; 
     background-color: transparent;
     padding: 0;
     padding-bottom: 20px;
     gap: 20px;
   }
 }
+

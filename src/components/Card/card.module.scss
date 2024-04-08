@@ -7,7 +7,8 @@
   background-size: cover;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  // align-items: center;
+    align-items: flex-end;
   overflow: hidden;
 
   &::before {
@@ -35,5 +36,6 @@
 @media (max-width: 576px) {
   .card {
     height: 255px;
+    width: 335px;
   }
 }

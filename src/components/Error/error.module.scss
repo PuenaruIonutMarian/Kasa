@@ -1,9 +1,9 @@
-@use "../../styles/variables.scss" as *;
+@use "../../styles/variables.scss"as *;
 
-.message{
-    color: $clr-primary;
-    text-align: center;
-    font-size: 2.4rem;
+.message {
+  color: $clr-primary;
+  text-align: center;
+  font-size: 2.4rem;
 }
 
 .errorMessage {
@@ -39,12 +39,15 @@
     justify-content: center;
     gap: 2rem;
 
-    h1 {
-      font-size: 142px;
+    img {
+      height: 150px;
+      width: 300px;
     }
+
 
     h3 {
       font-size: 24px;
+      text-align: center;
     }
 
     a {
@@ -57,8 +60,9 @@
   .errorMessage {
     gap: 5rem;
 
-    h1 {
-      font-size: 96px;
+    img {
+      height: 99px;
+      width: 198px;
     }
 
     h3 {
@@ -71,6 +75,3 @@
     }
   }
 }
-
-
-

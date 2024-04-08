@@ -4,9 +4,8 @@
   align-items: center;
 }
 
-.logo {
+.logo img {
   width: 210px;
-  height: 68px;
 }
 
 .nav ul {
@@ -24,4 +23,30 @@
 .nav ul li a:global(.active) {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 145px;
+  }
+
+  .nav ul {
+    gap: 26px;
+
+    li a {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .nav ul li a {
+    font-size: 12px;
+
+  }
+  .nav ul{
+    gap: 15px;
+  }
+}
+
 
