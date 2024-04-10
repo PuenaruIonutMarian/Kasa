@@ -17,7 +17,7 @@ function Collapse({ title, content }) {
           <img
             src={chevronDown}
             alt=""
-            style={{ transform: isOpen ? "rotate(180deg)" : "" }}
+            style={{ transform: !isOpen ? "rotate(180deg)" : "" }}
           />
         </span>
       </div>

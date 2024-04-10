@@ -8,8 +8,6 @@
   height: 209px;
   padding-top: 2.5rem;
   margin-top: auto;
-
-
   gap: 30px;
 
   img {
@@ -20,20 +18,16 @@
     color: #fff;
     font-size: 24px;
   }
-}
 
-@media (max-width: 1024px) {
-  .footer {
+  @media (max-width: 1024px) {
     gap: 16px;
 
     p {
       font-size: 20px;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .footer {
+  @media (max-width: 768px) {
     gap: 0;
 
     p {

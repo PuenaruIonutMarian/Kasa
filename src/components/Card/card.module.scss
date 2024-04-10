@@ -14,24 +14,19 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(#ffffff00 0%,
-        #0a0a0a00 0%,
-        #04040434 20.5%,
-        #00000080 50%);
+    background: linear-gradient(#ffffff00 0%, #0a0a0a00 0%, #04040434 20.5%, #00000080 50%);
   }
 
   h3 {
-    font-size: 18px;
-    font-weight: 700;
+    font: 700 18px/1 sans-serif;
     color: #fff;
     margin: 0;
     padding: 20px;
     z-index: 1;
+    line-height: 142.6%; 
   }
-}
 
-@media (max-width: 576px) {
-  .card {
+  @media (max-width: 576px) {
     height: 255px;
     width: 335px;
   }

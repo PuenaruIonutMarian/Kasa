@@ -1,4 +1,4 @@
-@use "../../styles/variables.scss"as *;
+@use "../../styles/variables.scss" as *;
 
 .message {
   color: $clr-primary;
@@ -14,9 +14,11 @@
   align-items: center;
   justify-content: center;
 
-  img {
-    height: 263px;
-    width: 597px;
+  h1 {
+    color: $clr-primary;
+    font-size: 288px;
+    font-weight: 700;
+    margin: 0;
   }
 
   h3 {
@@ -29,21 +31,11 @@
     color: #000;
     font-size: 18px;
   }
-}
 
-@media (max-width: 768px) {
-  .errorMessage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-
-    img {
-      height: 150px;
-      width: 300px;
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 142px;
     }
-
 
     h3 {
       font-size: 24px;
@@ -54,20 +46,18 @@
       font-size: 16px;
     }
   }
-}
 
-@media (max-width: 576px) {
-  .errorMessage {
+  @media (max-width: 576px) {
     gap: 5rem;
 
-    img {
-      height: 99px;
-      width: 198px;
+    h1 {
+      font-size: 96px;
     }
 
     h3 {
       font-size: 18px;
       max-width: 250px;
+      line-height: 142.6%;
     }
 
     a {

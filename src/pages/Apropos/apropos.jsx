@@ -7,7 +7,7 @@ const qualities = [
   {
     title: "Fiabilité",
     statement:
-      "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes",
+      "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.",
   },
   {
     title: "Respect",
@@ -30,6 +30,7 @@ function Apropos() {
   return (
     <>
       <Hero type="apropos" heroImg={heroImg} />
+
       <main className={`${styles.main} margins`}>
         {qualities.map((quality, index) => (
           <Collapse

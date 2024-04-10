@@ -52,7 +52,7 @@ function Accommodation() {
           <Rating rating={accommodation.rating} />
         </div>
       </section>
-      <section className={styles.accordion_wrapper}>
+      <section className={styles.collapse_wrapper}>
         <Collapse title="Description" content={accommodation.description} />
         <Collapse title="Équipements" content={accommodation.equipments} />
       </section>
