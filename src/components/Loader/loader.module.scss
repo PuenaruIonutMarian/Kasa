@@ -44,3 +44,15 @@
 @keyframes l4-2 {
   100% {top:-0.1px}
 }
+
+@media screen and (max-width: 768px) {
+  .loader {
+    width: 150px;
+    height: 50px;
+  }
+
+  .loader:before {
+    width: 20px;
+    height: 30px;
+  }
+}
