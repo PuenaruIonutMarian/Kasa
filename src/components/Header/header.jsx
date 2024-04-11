@@ -1,8 +1,12 @@
-// import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./header.module.scss";
 import logo from '../../assets/logo.svg';
 
+/**
+ * Composant pour l'en-tête de l'application.
+ * @module Header
+ * @returns {JSX.Element} Le composant représentant l'en-tête.
+ */
 const Header = () => {
   return (
     <header className={`${styles.header} margins`}>

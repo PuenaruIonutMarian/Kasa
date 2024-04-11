@@ -9,23 +9,30 @@ import Rating from '../../components/Rating/rating';
 import Collapse from '../../components/Collapse/collapse';
 import { Loader } from '../../components/Loader/loader';
 
+
+/**
+ * Composant pour afficher les détails d'un hébergement.
+ * @module Accommodation
+ * @returns {JSX.Element} Le composant affichant les détails de l'hébergement.
+ */
 function Accommodation() {
-  const { id } = useParams(); 
+  /** Récupération de l'identifiant de l'hébergement depuis les paramètres d'URL */
+  const { id } = useParams();
+  /** Utilisation du hook useAccommodations pour obtenir les données d'hébergement */
   const { isLoading, error, getAccommodationById } = useAccommodations();
+  /** Récupération des détails de l'hébergement correspondant à l'identifiant */
   const accommodation = getAccommodationById(id);
 
-
-// error handling
+  // Gestion des erreurs
   if (isLoading) {
     return <Loader />;
   } else if (error) {
     return <ErrorMessage />;
-  } else if (!accommodation){
+  } else if (!accommodation) {
     return <Error />;
   }
 
-
-  // Render accommodation details
+  // Rendu des détails de l'hébergement
   return (
     <main className={`${styles.main} margins`}>
       <section>

@@ -1,3 +1,7 @@
-import {createContext } from 'react'
+import { createContext } from 'react';
 
-export const RequestContext = createContext()
+/**
+ * Contexte pour la gestion des requêtes dans l'application React.
+ * @module RequestContext
+ */
+export const RequestContext = createContext();

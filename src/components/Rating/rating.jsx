@@ -1,6 +1,13 @@
 import styles from "./rating.module.scss";
 
-function Rating({rating}) {
+/**
+ * Composant représentant un système de notation.
+ * @module Rating
+ * @param {string} rating - La note à afficher.
+ * @returns {JSX.Element} Le composant représentant le système de notation.
+ */
+function Rating({ rating }) {
+  /** Tableau contenant les icônes de notation */
   const ratings = [...Array(5)].map((_, index) => (
     <svg
       key={index}
@@ -17,6 +24,7 @@ function Rating({rating}) {
     </svg>
   ));
 
+  /** Rendu du système de notation */
   return <div className={styles.rating}>{ratings}</div>;
 }
 

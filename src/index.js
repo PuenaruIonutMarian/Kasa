@@ -10,7 +10,12 @@ import Apropos from './pages/Apropos/apropos';
 import Accommodation from './pages/Accomodation/accomodation';
 import AppWrapper from './components/AppWrapper/appwrapper';
 
+/**
+ * Racine de l'application React.
+ * @module Root
+ */
 
+// Création de la racine de l'application React
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -26,6 +26,11 @@ const qualities = [
   },
 ];
 
+/**
+ * Informations sur les valeurs et les services de l'application.
+ * @module Apropos
+ * @returns {JSX.Element} Le composant contenant les informations sur l'application.
+ */
 function Apropos() {
   return (
     <>

@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
 import styles from "./error.module.scss";
 
+/**
+ * Composant pour afficher une erreur 404.
+ * @module Error
+ * @returns {JSX.Element} Le composant représentant l'erreur 404.
+ */
 function Error() {
     return (
         <div className={styles.errorMessage}>

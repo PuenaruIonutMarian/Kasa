@@ -7,7 +7,13 @@ import Card from '../../components/Card/card';
 import { Loader } from '../../components/Loader/loader';
 import ErrorMessage from '../../components/Error/ErrorMessage';
 
+/**
+ * Composant pour la page d'accueil de l'application.
+ * @module Home
+ * @returns {JSX.Element} Le composant de la page d'accueil.
+ */
 function Home() {
+  /** Utilisation du hook useAccommodations pour obtenir les données d'hébergement */
   const { accommodations, isLoading, error } = useAccommodations();
   
   return (
