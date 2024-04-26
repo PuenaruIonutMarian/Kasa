@@ -1,7 +1,22 @@
 import { createContext } from 'react';
+import requestService from '../../requestService/requestService';
+
+export const RequestContext = createContext();
 
 /**
- * Contexte pour la gestion des requêtes dans l'application React.
- * @module RequestContext
+* Crée un fournisseur de contexte pour le RequestContext.
+*
+* @param {Object} props - L'objet props.
+* @param {React.ReactNode} props.children - Les composants enfants.
+* @return {JSX.Element} Le composant RequestContext.Provider.
+
  */
-export const RequestContext = createContext();
+export const RequestContextProvider = ({ children }) => {
+  const service = new requestService();
+
+  return (
+    <RequestContext.Provider value={service}>
+      {children}
+    </RequestContext.Provider>
+  );
+};

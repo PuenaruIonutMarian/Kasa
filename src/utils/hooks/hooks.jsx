@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import requestService from '../../requestService/requestService';
+import { useState, useEffect, useContext } from 'react';
+import { RequestContext } from '../../utils/context/context';
 
 /**
  * Hook personnalisé pour gérer les données d'hébergement dans un composant fonctionnel.
@@ -7,6 +7,11 @@ import requestService from '../../requestService/requestService';
  * @returns {Object} Les données d'hébergement, l'état de chargement et les éventuelles erreurs.
  */
 export function useAccommodations() {
+  /** Service de requête pour récupérer les données d'hébergement */
+  const service = useContext(RequestContext);
+  if (!service) {
+    throw new Error("useAccommodations doit être utilisé dans un RequestContextProvider.");
+  }
   /** État local pour stocker les données d'hébergement */
   const [accommodations, setAccommodations] = useState([]);
   /** État local pour indiquer si les données sont en cours de chargement */
@@ -18,9 +23,6 @@ export function useAccommodations() {
    * Effet pour récupérer les données d'hébergement lors du montage du composant.
    */
   useEffect(() => {
-    /** Service de requête pour récupérer les données d'hébergement */
-    const service = new requestService();
-
     /**
      * Fonction pour récupérer les données d'hébergement.
      */
@@ -35,7 +37,7 @@ export function useAccommodations() {
     };
 
     fetchAccommodations();
-  }, []);
+  }, [service]);
 
   /**
    * Fonction pour gérer les erreurs lors de la récupération des données d'hébergement.

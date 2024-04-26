@@ -9,6 +9,7 @@ import Footer from './components/Footer/footer';
 import Apropos from './pages/Apropos/apropos';
 import Accommodation from './pages/Accomodation/accomodation';
 import AppWrapper from './components/AppWrapper/appwrapper';
+import { RequestContextProvider } from './utils/context/context';
 
 /**
  * Racine de l'application React.
@@ -20,16 +21,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <AppWrapper>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error />} />
-          <Route path="apropos" element={<Apropos />} />
-          <Route path='accomodation/:id' element={<Accommodation />}/>
-        </Routes>
-        <Footer />
-      </AppWrapper>
+      <RequestContextProvider>
+        <AppWrapper>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<Error />} />
+            <Route path="apropos" element={<Apropos />} />
+            <Route path='accomodation/:id' element={<Accommodation />}/>
+          </Routes>
+          <Footer />
+        </AppWrapper>
+      </RequestContextProvider>
     </Router>
   </React.StrictMode>,
 );

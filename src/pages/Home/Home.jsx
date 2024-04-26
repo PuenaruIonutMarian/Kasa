@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAccommodations } from '../../utils/hooks/hooks';
 import styles from './home.module.scss';
 import Hero from '../../components/Hero/hero';
